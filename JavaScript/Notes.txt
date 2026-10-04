@@ -1,0 +1,125 @@
+Java Script: Intoduced in 1995, Initial name is mocha -> net scope company(browser company).
+-------------
+    -> in 1991 java is introduced by JAMES GHOSTLE.
+    -> JavaScript is a scripting language as well as programming language.
+    -> By using javascript we can build servers thats y we call it as programming languages.
+    -> javascript is the dynamically typed programming.
+    -> js having single call stack.
+    -> js has only interpretor there's no compiler.
+
+    mocha -> net scope company(browser company)
+        |
+    live script (renamed as this because of technical license)
+        |
+    Javascript(ECMA) -> 1996 add new features -> release new first version ES1(ECMA script)
+
+    -> Stable version of the js is ES6
+    -> Present version is ES16 (released in April 26)
+
+Use of JS :
+---------------
+    ->Using JS we can build dynamic web applications.
+    -> we can add functionalities to the web pages.
+    -> here we can achieve the DOM(Document Object Model) functionalities.
+    -> We can fetch data from server(API's) and we can send data to the server(API's).
+    -> we can use it as frntend and backend also.
+
+Implementations:
+-----------------
+1. Inline
+2. Internal
+3. External
+
+Tokens:
+----------
+    -> tokens are the smallest units int the JS code
+    
+    Types:
+        1. Identifires
+            ->Identifires are the names given to the code
+            -> In the place of Identifiers we cannot use Keywords
+            Ex: variable names, class names, function names
+
+            rules:
+                # No special chars except _, $.
+                # No space
+                # No starts with numbers
+        2. Keywords
+            ->built in prdeifined words
+        3. literals
+        4. operators
+        5. Separators
+        6. comments
+
+Variables:
+-------------
+    ->Variables are the named memory location used to store data or values and it can change N no.of times during execution
+
+Way to declare Variables:
+---------------------------
+    1. let
+        -> let variable acts like a block scope.
+        -> declaration and initialization in same line and different line is possible.
+        -> re-declaration is not possible and re-initialization is possible.
+        -> we cannot hoist the "let variables".
+    2. var
+        -> var variable acts like a global scope.
+        -> declaration and initialization in same line and different line is possible.
+        -> re-declaration  and re-initialization is possible.
+        -> we can hoist the "var variables".
+    3. const
+        -> const variable acts like a block scope and final.
+        -> declaration and initialization in same line is possible.
+        -> declaration and initialization in  different line is not possible.
+        -> re-declaration  and re-initialization is not possible.
+        -> we cannot hoist the "const variables".
+
+
+Data Types:
+------------
+    -> Data types represent the what type of data we are storing on variable
+
+    Types:
+        1. Primitive DataTypes
+            # number 
+            # strings
+            # boolean
+            # null it is a bug (Object)
+            # undefine
+            # symbol
+            # bigint -> m = 8786324726475150275437437285n n is very important for taking it a big int without that it will take as bigint
+
+            @ null and " " difference " " is a string that can occupy memory but null doesn't occupy any memory
+            @ == and === (== only checks the value but === checks the type also)
+
+        2. Non-Primitive DataTypes
+            # Arrays
+                ->  Arrays are the linear data structures and used to store both homogeneous and heterogeneous data
+                -> why index starts with 0 because it follows steps theroy means at starting stage the man stands at the ground that is step 0 and next step is step 1
+                Ways to Declare:
+                -----------------
+                    1.Literal Way
+                        Syntax: 
+                            variableType variableName = [value1,value2,......]
+                    2.using new Keyword
+                        Syntax: 
+                            variableType variableName = new Array(value1,value2,......)
+            # Functions 
+                -> Functions are the block of statements that will get execute when ever it is called
+
+                Note:
+                    -> Code Reusability and to increase Code Readability
+
+                1. Anonymous Functions
+                2. Normal Function/Named Function
+                3. Functional Expression
+                4. First class Function
+                5. immediate invoking funtion / self calling funtion (IIF)
+                6. Array
+                7. Nested funtion
+                8. Higher order Function
+                9. Callback funtion
+                10. Generator Function
+                
+            # Objectives
+            # .class Types

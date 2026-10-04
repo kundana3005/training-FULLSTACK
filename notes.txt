@@ -1,0 +1,78 @@
+2. unpaired Tags/self Closing tags:
+------------------------------------
+	-> Any tags having only opening tags
+	Ex: <br> - Break the line,
+	    <hr> - horizontal line,
+            <input> - form,
+	    <img> - display image
+
+Attributes in html:
+-------------------
+-> Attributes are the additional information given to the tags
+-> Attributes are always in opening tag (static tag)
+-> Most of the Attributes are key and value pair
+
+Ex: 
+	<input  type="password" required placeholder="Enter Your Name">
+	<p style="color: red" id="para-container" align="center">Content</p>
+
+if two are with same name and different values then it will follow the first one 
+ex:
+	<p align="left" align="center" style="color: red" id="para-container">Content</p> --> follows left
+	<p align="center" align="left" style="color: red" id="para-container">Content</p> --> follows center
+
+HTML Elements
+--------------
+-> opening tag, closing tag and content together is called elements
+Types:
+
+1. Block Level Elements
+     ->Any elements which will consumes entire width of the browser
+	Ex: all Headings Tags, <div></div>, <p></p>, <li></li>, semantic tags ..etc
+2. Inline Level Elements
+     ->Any elements which will consumes only content width of the browser
+	Ex: all Formatting tags, <span></span>, <input>, <img>, <a></a>
+
+List In HTML:
+-------------
+	-> List Are used to display items in order(numberings) or unordered(symbolic) formate
+	Types:
+	------
+	1.Orderd List
+		->In HTML <ol> </ol> represent the order List
+		-><ol> </ol> contains <li></li>(list items)
+			shortcut - 
+			a. ol>li*6
+			 	<ol>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			b. li{list item-$}*6
+				<li>list item-1</li>
+				<li>list item-2</li>
+				<li>list item-3</li>
+				<li>list item-4</li>
+				<li>list item-5</li>
+				<li>list item-6</li>
+		-> Attributes:
+		  		type - 1,A,a,i,I
+				start - numbers start from 100
+				reversed -  comes in reverse 3 2 1 
+
+	2.Unorderd List
+		-> In HTML <ul></ul> represent the unorderd List
+		-> type - none, circle, square, disc
+
+	3.Description/Definition List
+		-> <dl></dl> -> description list
+		-> <dt></dt> -> description term
+		-> <dd></dd> -> description data
+		
+	4.Nested List
+	
+
+
