@@ -1,0 +1,29 @@
+SQL
+---------
+
+1. databases
+        we should put our tables in a database only
+
+        for that we need to use query to create the database and connect it.
+
+                    " create database {name}"
+                    " use {name}; " 
+
+
+
+
+
+
+
+JDBC
+-----
+    --> Java Database Connectivity acts like a bridge to communicate b/w java application & SQL.
+    --> Connection steps:
+    ----------------------
+                # Load & register the driver class.
+                    " com.jdbc.mysql.cj.Driver "
+                # Establish the connection by calling " DriverManager.getConnection() "
+                # Prepared Statement and Execute Query ( execute(), exrcuteUpdate())
+                # close the connection
+                        " Connection c = DriverManager.getConnection() "
+                        " c.close(); "

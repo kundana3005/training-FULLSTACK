@@ -1,0 +1,15 @@
+.ball{
+    height: 300px;
+    width: 300px;
+    background-color: darkgreen;
+    border-radius: 50%;
+    animation: ball 1s ease-in 2s infinite alternate;
+}
+@keyframes ball {
+    from{
+        transform: translateY(-200px);
+    }to{
+        transform: translateY(200px);
+    }
+    
+}

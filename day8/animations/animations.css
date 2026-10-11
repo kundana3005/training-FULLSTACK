@@ -1,0 +1,19 @@
+.loader{
+    height: 300px;
+    width: 300px;
+    background-color: rosybrown;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid royalblue;
+    border-top: 10px solid yellowgreen;
+    animation: rotate 1s linear 1s infinite normal;
+    align-items: center;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

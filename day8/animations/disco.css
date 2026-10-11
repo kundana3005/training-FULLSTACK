@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(211, 96, 144);
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: disco 1s linear 1s infinite alternate;
+}
+h1{
+    background-color: rgb(165, 108, 239);
+}
+@keyframes disco {
+    0%{
+        background-color: aqua;
+    }15%{
+        background-color: rgb(236, 135, 11);
+    }30%{
+        background-color: rgb(25, 204, 76);
+    }45%{
+        background-color: blue;
+    }60%{
+        background-color: rgb(207, 228, 13);
+    }75%{
+        background-color: rgb(218, 8, 197);
+    }90%{
+        background-color: rgb(222, 13, 40);
+    }
+}
