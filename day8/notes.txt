@@ -1,51 +1,590 @@
-Animation
----------
-    To animate CSS elements
-        @keyframe myName{
-            from { font-size: 20px;}
-            to { font-size: 40px;}
+JAVASCRIPT BASICS – COMMENTS, OPERATORS, INPUT/OUTPUT, AND CONTROL STATEMENTS
+
+1. COMMENTS IN JAVASCRIPT
+-------------------------------
+    Comments are used to explain code. They are ignored by the JavaScript engine and are not executed.
+
+    Types of comments:
+
+    1. Single-line comment
+    -----------------------
+        Used to write a comment on one line.
+
+        Example:
+        ```javascript
+        // This is a single-line comment
+        let age = 20;
+        ```
+
+    2. Multi-line comment
+    -----------------------
+        Used to write comments across multiple lines.
+
+        Example:
+        ```javascript
+        /*
+        This is a multi-line comment.
+        It can contain multiple lines.
+        */
+        let name = "Ravi";
+        ```
+
+2. OPERATORS IN JAVASCRIPT
+---------------------------
+
+    Operators are symbols used to perform operations on values and variables.
+
+    A. Arithmetic Operators
+
+        Used to perform mathematical calculations.
+
+        Operator | Meaning | Example | Result
+        + | Addition | 10 + 5 | 15
+        - | Subtraction | 10 - 5 | 5
+        * | Multiplication | 10 * 5 | 50
+        / | Division | 10 / 5 | 2
+        % | Remainder | 10 % 3 | 1
+        ** | Exponentiation | 2 ** 3 | 8
+        ++ | Increment by 1 | x++ | Increases x by 1
+        -- | Decrement by 1 | x-- | Decreases x by 1
+
+        Example:
+        ```javascript
+        let a = 10;
+        let b = 3;
+
+        console.log(a + b); // 13
+        console.log(a - b); // 7
+        console.log(a * b); // 30
+        console.log(a / b); // 3.333...
+        console.log(a % b); // 1
+        console.log(a ** b); // 1000
+        ```
+
+        Note:
+        The ++ operator increases a value by 1.
+        The -- operator decreases a value by 1.
+
+    B. Assignment Operators
+
+        Used to assign values to variables or update their values.
+
+        Operator | Example | Equivalent operation
+        = | x = 10 | Assign 10 to x
+        += | x += 5 | x = x + 5
+        -= | x -= 5 | x = x - 5
+        *= | x *= 2 | x = x * 2
+        /= | x /= 2 | x = x / 2
+        %= | x %= 3 | x = x % 3
+
+        Example:
+        ```javascript
+        let x = 10;
+
+        x += 5;
+        console.log(x); // 15
+
+        x -= 3;
+        console.log(x); // 12
+
+        x *= 2;
+        console.log(x); // 24
+
+        x /= 4;
+        console.log(x); // 6
+        ```
+
+    C. Comparison Operators
+
+        Used to compare two values. The result is always true or false.
+
+        Operator | Meaning | Example | Result
+        == | Equal value after type conversion | 5 == "5" | true
+        === | Equal value and equal type | 5 === "5" | false
+        != | Not equal after type conversion | 5 != "6" | true
+        !== | Not equal value or type | 5 !== "5" | true
+        > | Greater than | 10 > 5 | true
+        < | Less than | 3 < 2 | false
+        >= | Greater than or equal to | 5 >= 5 | true
+        <= | Less than or equal to | 4 <= 5 | true
+
+        Difference between == and ===:
+
+        == compares values after possible type conversion.
+        === compares both value and data type without type conversion.
+
+        Example:
+            ```javascript
+            console.log(10 == "10");  // true
+            console.log(10 === "10"); // false
+            console.log(10 != "10");  // false
+            console.log(10 !== "10"); // true
+            ```
+
+        Best practice: Prefer === and !== because they avoid unexpected type conversions.
+
+    D. Logical Operators
+
+        Used to combine or reverse conditions.
+
+        1. AND (&&)
+            Returns true only when both conditions are true.
+
+            Example:
+            ```javascript
+            let age = 22;
+
+            console.log(age >= 18 && age <= 60); // true
+            ```
+
+        2. OR (||)
+            Returns true when at least one condition is true.
+
+            Example:
+            ```javascript
+            let marks = 85;
+
+            console.log(marks >= 90 || marks >= 80); // true
+            ```
+
+        3. NOT (!)
+            Reverses a Boolean value: true becomes false and false becomes true.
+
+            Example:
+            ```javascript
+            let isRaining = false;
+
+            console.log(!isRaining); // true
+            ```
+
+    E. Other Useful Operators
+
+        1. String concatenation (+)
+            Joins strings together.
+
+            Example:
+            ```javascript
+            let firstName = "Ravi";
+            let lastName = "Kumar";
+
+            console.log(firstName + " " + lastName);
+            // Ravi Kumar
+            ```
+
+        2. Ternary operator (?:)
+            A short way to write a simple if-else condition.
+
+            Syntax:
+            condition ? valueIfTrue : valueIfFalse;
+
+            Example:
+            ```javascript
+            let age = 20;
+
+            let result = age >= 18 ? "Adult" : "Minor";
+
+            console.log(result); // Adult
+            ```
+
+            3. typeof operator
+            Returns the type of a value as a string.
+
+            Example:
+            ```javascript
+            console.log(typeof 25);       // number
+            console.log(typeof "Hello");  // string
+            console.log(typeof true);     // boolean
+            ```
+
+3. TAKING INPUT AND DISPLAYING OUTPUT
+-----------------------------------------
+
+    A. Displaying Output
+    --------------------
+
+        1. console.log()
+        ----------------
+            Displays output in the browser's developer console or the terminal when using Node.js.
+
+            Example:
+            ```javascript
+            console.log("Hello World");
+            console.log(10 + 20); // 30
+            ```
+
+        2. alert()
+        ----------
+            Displays a message in a browser popup.
+
+            Example:
+            ```javascript
+            alert("Welcome to JavaScript!");
+            ```
+
+        3. document.write()
+        ---------------------
+            Writes content directly into an HTML document.
+
+            Example:
+            ```javascript
+            document.write("Hello World");
+            ```
+
+            Note: document.write() is mainly useful for simple demonstrations. Avoid using it after a page has loaded because it can replace the document's content.
+
+        4. innerHTML
+        ------------
+            Displays HTML content inside an HTML element.
+
+            Example:
+            ```html
+            <p id="output"></p>
+
+            <script>
+            document.getElementById("output").innerHTML = "Hello World";
+            </script>
+            ```
+
+    B. Taking Input
+    ---------------
+
+        1. prompt()
+        -----------
+            Used in browsers to ask the user for input through a popup. It returns a string or null if cancelled.
+
+            Example:
+            ```javascript
+            let name = prompt("Enter your name:");
+
+            console.log("Hello " + name);
+            ```
+
+            Taking numeric input:
+            ```javascript
+            let a = Number(prompt("Enter first number:"));
+            let b = Number(prompt("Enter second number:"));
+
+            console.log("Sum = " + (a + b));
+            ```
+
+            Note: prompt() returns text, so use Number() when you need numeric calculations.
+
+        2. Input in Node.js
+        -------------------
+            In Node.js, prompt() is not available by default. You can use the readline module.
+
+            Example:
+            ```javascript
+            const readline = require("readline");
+
+            const rl = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+            });
+
+            rl.question("Enter your name: ", function(name) {
+                console.log("Hello " + name);
+                rl.close();
+            });
+            ```
+
+4. CONTROL STATEMENTS
+
+        Control statements determine which statements execute and how many times they execute.
+
+        
+    A. if Statement
+    ---------------
+
+        Executes a block of code when a condition is true.
+
+        Syntax:
+        ```javascript
+        if (condition) {
+            // Code to execute
         }
+        ```
 
-    Properties:
-    ----------
-        --> animation-name
-        --> animation-duration
-        --> animation-timing-function
-        --> animation-delay
-        --> animation-iteration-count
-        --> animation-direction
+        Example:
+        ```javascript
+        let age = 20;
 
-    Animation-Shorthand
-    -------------------
-            animation: myName 2s linear 3s infinite normal
-
-    % in Animation
-    --------------
-
-        @keyframe myName{
-            0% { font-size: 20px}
-            50% { font-size: 30px}
-            100% {font-size: 40px}
+        if (age >= 18) {
+            console.log("Eligible to vote");
         }
+        ```
 
-Media Queries
--------------
-    -> Help create a responsive website
+        Output:
+        Eligible to vote
 
-            @media(width:600px){
-                div{
-                    background-color: red;
-                }
+    B. if-else Statement
+    --------------------
+
+        Executes one block if the condition is true and another block if it is false.
+
+        Example:
+        ```javascript
+        let age = 16;
+
+        if (age >= 18) {
+            console.log("Adult");
+        } else {
+            console.log("Minor");
+        }
+        ```
+
+        Output:
+        Minor
+
+    C. if-else if-else Statement
+    ------------------------------
+
+        Used when there are multiple conditions to check. The first true condition's block is executed.
+
+        Example:
+        ```javascript
+        let marks = 75;
+
+        if (marks >= 90) {
+            console.log("Grade A");
+        } else if (marks >= 75) {
+            console.log("Grade B");
+        } else if (marks >= 50) {
+            console.log("Grade C");
+        } else {
+            console.log("Fail");
+        }
+        ```
+
+        Output:
+        Grade B
+
+        D. switch Statement
+
+        Used to select one block from multiple possible cases.
+
+        Syntax:
+        ```javascript
+        switch (expression) {
+            case value1:
+                // Code
+                break;
+
+            case value2:
+                // Code
+                break;
+
+            default:
+                // Code if no case matches
+        }
+        ```
+
+        Example:
+        ```javascript
+        let day = 2;
+
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+
+            case 2:
+                console.log("Tuesday");
+                break;
+
+            case 3:
+                console.log("Wednesday");
+                break;
+
+            default:
+                console.log("Invalid day");
+        }
+        ```
+
+        Output:
+        Tuesday
+
+        Important points:
+        - case specifies a value to match.
+        - break stops execution from continuing into the next case.
+        - default executes when no case matches.
+        - If break is omitted, execution can continue into the following cases. This is called fall-through.
+        - switch uses strict comparison when matching case values.
+
+5. LOOPS IN JAVASCRIPT
+-----------------------
+
+    Loops are used to execute a block of code repeatedly.
+
+     A. for Loop
+     -----------
+
+            Used when the number of repetitions is known or controlled by a counter.
+
+            Syntax:
+            ```javascript
+            for (initialization; condition; update) {
+                // Code to repeat
             }
+            ```
 
-            @media(min-width: 600px){
-                div{
-                    background-color: red;
-                }
+            Example:
+            ```javascript
+            for (let i = 1; i <= 5; i++) {
+                console.log(i);
             }
+            ```
 
-            @media(min-width:200px) and (min-width:300px){
-                div{
-                    background-color: red;
-                }
+            Output:
+            1
+            2
+            3
+            4
+            5
+
+            Explanation:
+            - Initialization: let i = 1; runs once at the beginning.
+            - Condition: i <= 5; checked before each iteration.
+            - Update: i++; runs after each iteration.
+            - The loop stops when the condition becomes false.
+
+    B. while Loop
+    -------------
+
+            Checks the condition before executing the loop body. It may execute zero times if the condition is initially false.
+
+            Syntax:
+            ```javascript
+            while (condition) {
+                // Code
             }
+            ```
+
+            Example:
+            ```javascript
+            let i = 1;
+
+            while (i <= 5) {
+                console.log(i);
+                i++;
+            }
+            ```
+
+            Output:
+            1
+            2
+            3
+            4
+            5
+
+            Note: Remember to update the variable when necessary. Otherwise, the loop may run forever.
+
+    C. do-while Loop
+    ----------------
+            Executes the loop body first and checks the condition afterward. Therefore, it executes at least once.
+
+            Syntax:
+            ```javascript
+            do {
+                // Code
+            } while (condition);
+            ```
+
+            Example:
+            ```javascript
+            let i = 1;
+
+            do {
+                console.log(i);
+                i++;
+            } while (i <= 5);
+            ```
+
+            Output:
+            1
+            2
+            3
+            4
+            5
+
+            Difference between loops:
+
+            for loop:
+            Useful when a counter controls the number of repetitions.
+
+            while loop:
+            Useful when repetition depends on a condition.
+
+            do-while loop:
+            Useful when the code must execute at least once.
+
+6. break AND continue
+----------------------
+
+        A. break Statement
+        ------------------
+
+            Stops the nearest enclosing loop or switch statement immediately.
+
+            Example:
+            ```javascript
+            for (let i = 1; i <= 5; i++) {
+                if (i === 3) {
+                    break;
+                }
+
+                console.log(i);
+            }
+            ```
+
+            Output:
+            1
+            2
+
+            Explanation:
+            When i becomes 3, break terminates the loop.
+
+        B. continue Statement
+        ---------------------
+
+            Skips the current iteration and moves to the next iteration of the loop.
+
+            Example:
+            ```javascript
+            for (let i = 1; i <= 5; i++) {
+                if (i === 3) {
+                    continue;
+                }
+
+                console.log(i);
+            }
+            ```
+
+            Output:
+            1
+            2
+            4
+            5
+
+            Explanation:
+            When i becomes 3, continue skips console.log() for that iteration. The loop then continues with i = 4.
+
+            Difference between break and continue:
+
+            break:
+            Terminates the loop completely.
+
+            continue:
+            Skips only the current iteration and continues with the next one.
+
+
+IMPORTANT POINTS TO REMEMBER
+
+- Use // for single-line comments and /* ... */ for multi-line comments.
+- Use === for strict equality comparison.
+- Use Number() to convert numeric input from prompt().
+- Use if-else for conditions and switch for matching multiple cases.
+- for, while and do-while are repetition statements.
+- break terminates a loop; continue skips the current iteration.
+- JavaScript is case-sensitive.
+- Use braces {} to group statements inside control blocks.
